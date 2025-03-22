@@ -9,7 +9,7 @@ async function shortenUrl(url, customShortId) {
         if (customShortId) {
             payload.customShortId = customShortId; // Add customShortId to the payload if provided
         }
-
+        console.log(payload);
         // Make a POST request to your backend API
         const response = await axios.post('https://shatty.onrender.com/', payload);
         console.log(response.data);
